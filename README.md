@@ -1,11 +1,11 @@
-# /*:white_check_mark:*/ Libft (project 2022) 
+# Libft (project 2022) 
 
-## Task 
+## Description 
 La tâche principale est d'écrire votre propre bibliothèque de fonctions pour une utilisation ultérieure dans des projets en C.
 Les fonctions doivent être implémentées de la même manière que les fonctions d'origine de la bibliothèque standard.
 Cependant, toutes les fonctions doivent être protégées contre la saisie de données invalides, les fuites de mémoire, les fausses segmentations, etc.
 
-## List functions  
+## Listes des fonctions  
 | Part 1  | Part 2 | Bonus |
 | ------------- | ------------- | ------------- |
 | ft_memset  | ft_substr  | ft_lstnew  |
@@ -32,14 +32,14 @@ Cependant, toutes les fonctions doivent être protégées contre la saisie de do
 | ft_tolower  |  |   |
 | ft_calloc  |   |   |
 | ft_strdup  |  |   |
-## The results of the tests "Libftest"
+## Résultat du test "Libftest"
 SOON
 Link to the tests: [Click](https://github.com/jtoty/Libftest)
-## The results of the tests "libft-unit-test"
+## Résultat du test "libft-unit-test"
 SOON
 Link to the tests: [Click](https://github.com/alelievr/libft-unit-test)
-## Other
-Basic commands for compilation:
+## Commande Makefile
+
 ```
 make (make all) - compilation of 1 part and 2 part functions  
 make bonus - compilation of 1 part, 2 part and bonus part functions  
