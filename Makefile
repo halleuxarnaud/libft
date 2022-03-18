@@ -30,6 +30,7 @@ FILES = ft_strrchr \
 		ft_memset \
 		ft_strlcat \
 		ft_strlen \
+		ft_strlcpy \
 		ft_strncmp \
 		ft_strrchr \
 		ft_tolower \
@@ -41,6 +42,7 @@ FILES = ft_strrchr \
 		ft_putchar_fd \
 		ft_putnbr_fd \
 		ft_putstr_fd \
+		ft_putendl_fd \
 
 FILES_B = 	ft_ \
 
