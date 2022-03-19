@@ -4,8 +4,8 @@ void    ft_putstr_fd(char *s, int fd)
 {
     unsigned int i;
 
-    if(str == NULL)
-        return(NULL);
+    if(!s)
+        return ;
     i = 0;
     while(s[i])
     {

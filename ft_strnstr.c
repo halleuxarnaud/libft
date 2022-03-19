@@ -24,12 +24,12 @@ char	*ft_strnstr(const char *s1, const char *s2, size_t n)
 
 	tmp = (char *)s1;
 	mem = (char *)(s1 + n);
-	size = ft_strlen(s2);
+	size = ft_strlen((char *)s2);
 	if (!size)
 		return (tmp);
 	while ((tmp = ft_strchr(tmp, *s2)) && tmp <= mem)
 	{
-		if ((tmp + size <= mem) && !ft_strncmp(tmp, s2, size))
+		if ((tmp + size <= mem) && !ft_strncmp(tmp, (char *)s2, size))
 			return (tmp);
 		tmp++;
 	}

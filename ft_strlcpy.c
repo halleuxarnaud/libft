@@ -23,7 +23,6 @@ unsigned int ft_strlcpy(char *src, char *dest, unsigned int size)
 }
 
 /*
-
 int main()
 {
     char *src = "Hello";
@@ -31,3 +30,4 @@ int main()
 
     printf("%d", ft_strlcpy(src, dest, 4));
 }
+*/

@@ -28,7 +28,6 @@ FILES = ft_strrchr \
 		ft_memcpy \
 		ft_memmove \
 		ft_memset \
-		ft_strlcat \
 		ft_strlen \
 		ft_strlcpy \
 		ft_strncmp \
@@ -43,6 +42,7 @@ FILES = ft_strrchr \
 		ft_putnbr_fd \
 		ft_putstr_fd \
 		ft_putendl_fd \
+		ft_strtrim \
 
 FILES_B = 	ft_ \
 
