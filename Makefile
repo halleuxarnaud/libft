@@ -43,6 +43,8 @@ FILES = ft_strrchr \
 		ft_putstr_fd \
 		ft_putendl_fd \
 		ft_strtrim \
+		ft_strmapi \
+		ft_substr \
 
 FILES_B = 	ft_ \
 
