@@ -6,17 +6,17 @@
 /*   By: ahalleux <ahalleux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/04 12:38:04 by ahalleux          #+#    #+#             */
-/*   Updated: 2022/04/04 12:38:05 by ahalleux         ###   ########.fr       */
+/*   Updated: 2022/04/05 10:48:40 by ahalleux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int     ft_isdigit(int c)
+int	ft_isdigit(int c)
 {
-    if(c > 47 && c < 58)
-        return(1);
-    return(0);
+	if (c > 47 && c < 58)
+		return (1);
+	return (0);
 }
 /*
 int main()

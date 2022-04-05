@@ -6,7 +6,7 @@
 /*   By: ahalleux <ahalleux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/04 12:39:11 by ahalleux          #+#    #+#             */
-/*   Updated: 2022/04/04 12:39:12 by ahalleux         ###   ########.fr       */
+/*   Updated: 2022/04/05 11:39:57 by ahalleux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,8 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 
 	if (!s || !f)
 		return (NULL);
-	if (!(sptr = (char*)malloc(sizeof(char) * (ft_strlen((char *)s) + 1))))
+	sptr = (char *)malloc(sizeof(char) * (ft_strlen((char *)s) + 1));
+	if (!sptr)
 		return (NULL);
 	index = 0;
 	while (s[index])

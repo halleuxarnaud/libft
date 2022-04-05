@@ -6,7 +6,7 @@
 /*   By: ahalleux <ahalleux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/04 12:38:33 by ahalleux          #+#    #+#             */
-/*   Updated: 2022/04/04 12:38:33 by ahalleux         ###   ########.fr       */
+/*   Updated: 2022/04/05 11:16:21 by ahalleux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	*ft_memset(void *b, int c, size_t len)
 {
-	char *str;
+	char	*str;
 
 	str = b;
 	while (len)

@@ -6,7 +6,7 @@
 /*   By: ahalleux <ahalleux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/04 12:39:16 by ahalleux          #+#    #+#             */
-/*   Updated: 2022/04/04 12:39:17 by ahalleux         ###   ########.fr       */
+/*   Updated: 2022/04/05 11:27:10 by ahalleux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_strncmp(char *s1, char *s2, int n)
 {
-	int i;
+	int		i;
 
 	i = 0;
 	while ((s1[i] == s2[i] && s1[i] != '\0' && s2[i] != '\0') || i <= n)
@@ -23,7 +23,7 @@ int	ft_strncmp(char *s1, char *s2, int n)
 	}
 	return (s1[i] - s2[i]);
 }
- 
+
 /*
 int main(void)
 {

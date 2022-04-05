@@ -6,15 +6,17 @@
 /*   By: ahalleux <ahalleux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/04 12:40:01 by ahalleux          #+#    #+#             */
-/*   Updated: 2022/04/04 12:40:02 by ahalleux         ###   ########.fr       */
+/*   Updated: 2022/04/05 11:36:52 by ahalleux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_tolower(int c)
+#include "libft.h"
+
+int	ft_tolower(int c)
 {
-    if(c >= 'A' && c <= 'Z')
-    {
-        c += 32;
-    }
-    return(c);
+	if (c >= 'A' && c <= 'Z')
+	{
+		c += 32;
+	}
+	return (c);
 }

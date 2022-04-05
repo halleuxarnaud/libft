@@ -6,7 +6,7 @@
 /*   By: ahalleux <ahalleux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/04 12:39:26 by ahalleux          #+#    #+#             */
-/*   Updated: 2022/04/04 12:39:27 by ahalleux         ###   ########.fr       */
+/*   Updated: 2022/04/05 11:29:18 by ahalleux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,11 +22,11 @@ char	*ft_strrchr(const char *s, int c)
 	while (s[i])
 	{
 		if (s[i] == (char)c)
-			ret = &((char*)s)[i];
+			ret = &((char *)s)[i];
 		i++;
 	}
 	if (c == '\0')
-		ret = &((char*)s)[i];
+		ret = &((char *)s)[i];
 	return (ret);
 }
 

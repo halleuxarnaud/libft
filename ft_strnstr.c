@@ -6,7 +6,7 @@
 /*   By: ahalleux <ahalleux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/04 12:39:20 by ahalleux          #+#    #+#             */
-/*   Updated: 2022/04/04 12:39:23 by ahalleux         ###   ########.fr       */
+/*   Updated: 2022/04/05 12:11:29 by ahalleux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,8 @@ char	*ft_strnstr(const char *s1, const char *s2, size_t n)
 	size = ft_strlen((char *)s2);
 	if (!size)
 		return (tmp);
-	while ((tmp = ft_strchr(tmp, *s2)) && tmp <= mem)
+	tmp = ft_strchr(tmp, *s2);
+	while (tmp <= mem)
 	{
 		if ((tmp + size <= mem) && !ft_strncmp(tmp, (char *)s2, size))
 			return (tmp);

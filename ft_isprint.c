@@ -6,17 +6,17 @@
 /*   By: ahalleux <ahalleux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/04 12:38:10 by ahalleux          #+#    #+#             */
-/*   Updated: 2022/04/04 12:38:14 by ahalleux         ###   ########.fr       */
+/*   Updated: 2022/04/05 10:49:31 by ahalleux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int     ft_isprint(int c)
+int	ft_isprint(int c)
 {
-    if(c >= 32 && c <= 126)
-        return(1);
-    return(0);
+	if (c >= 32 && c <= 126)
+		return (1);
+	return (0);
 }
 /*
 int main()

@@ -6,22 +6,22 @@
 /*   By: ahalleux <ahalleux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/04 12:38:46 by ahalleux          #+#    #+#             */
-/*   Updated: 2022/04/04 12:38:47 by ahalleux         ###   ########.fr       */
+/*   Updated: 2022/04/05 11:19:29 by ahalleux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void    ft_putstr_fd(char *s, int fd)
+void	ft_putstr_fd(char *s, int fd)
 {
-    unsigned int i;
+	unsigned int	i;
 
-    if(!s)
-        return ;
-    i = 0;
-    while(s[i])
-    {
-        write(fd, &s[i], 1);
-        i++;
-    }
+	if (!s)
+		return ;
+	i = 0;
+	while (s[i])
+	{
+		write(fd, &s[i], 1);
+		i++;
+	}
 }

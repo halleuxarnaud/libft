@@ -6,7 +6,7 @@
 /*   By: ahalleux <ahalleux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/04 12:38:50 by ahalleux          #+#    #+#             */
-/*   Updated: 2022/04/04 12:38:51 by ahalleux         ###   ########.fr       */
+/*   Updated: 2022/04/05 11:20:05 by ahalleux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ char	*ft_strdup(char *src)
 	len = 0;
 	while (src[len])
 		len++;
-	str = (char*)malloc(sizeof(*str) * (len + 1));
+	str = (char *)malloc(sizeof(*str) * (len + 1));
 	i = 0;
 	while (i < len)
 	{
