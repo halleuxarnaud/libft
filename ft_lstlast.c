@@ -6,15 +6,15 @@
 /*   By: ahalleux <ahalleux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/06 13:33:47 by ahalleux          #+#    #+#             */
-/*   Updated: 2022/04/06 13:43:40 by ahalleux         ###   ########.fr       */
+/*   Updated: 2022/04/11 11:03:46 by ahalleux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list *ft_lstlast(t_list *lst)
+t_list	*ft_lstlast(t_list *lst)
 {
-    while(lst)
-        lst = lst->next;
-    return (lst);
+	while (lst)
+		lst = lst->next;
+	return (lst);
 }

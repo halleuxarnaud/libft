@@ -6,11 +6,11 @@
 /*   By: ahalleux <ahalleux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/04 12:38:50 by ahalleux          #+#    #+#             */
-/*   Updated: 2022/04/05 11:20:05 by ahalleux         ###   ########.fr       */
+/*   Updated: 2022/04/11 16:11:22 by ahalleux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
 
 char	*ft_strdup(char *src)
 {
@@ -18,15 +18,16 @@ char	*ft_strdup(char *src)
 	int		len;
 	char	*str;
 
-	len = 0;
-	while (src[len])
-		len++;
+	len = ft_strlen(src);
 	str = (char *)malloc(sizeof(*str) * (len + 1));
+	if (!str)
+		return (NULL);
 	i = 0;
 	while (i < len)
 	{
 		str[i] = src[i];
 		i++;
 	}
+	str[i] = '\0';
 	return (str);
 }

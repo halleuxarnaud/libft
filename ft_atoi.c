@@ -6,7 +6,7 @@
 /*   By: ahalleux <ahalleux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/04 12:37:17 by ahalleux          #+#    #+#             */
-/*   Updated: 2022/04/05 10:10:26 by ahalleux         ###   ########.fr       */
+/*   Updated: 2022/04/11 16:01:39 by ahalleux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 int	ft_atoi(const char *str)
 {
 	int		sign;
-	int		result;
+	unsigned long long		result;
 	int		i;
 
 	result = 0;
@@ -33,16 +33,11 @@ int	ft_atoi(const char *str)
 	{
 		result *= 10;
 		result += str[i++] - '0';
+		if (result > LLONG_MAX && sign == 1)
+			return (-1);
+		if (result > LLONG_MAX && sign == -1)
+			return (0);
 	}
 	result *= sign;
-	return (result);
+	return ((int)(result));
 }
-
-/*
-int		main(int argc, char **argv)
-{
-	(void)argc;
-	printf("Resultat attendu %d\n", atoi(argv[1]));
-	printf("Mon resultat %d\n", ft_atoi(argv[1]));
-}
-*/

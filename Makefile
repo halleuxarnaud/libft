@@ -16,37 +16,43 @@ RM = rm -f
 
 
 FILES = ft_strrchr \
-		ft_atoi \
-		ft_bzero \
-		ft_isalnum \
-		ft_isalpha \
-		ft_isdigit \
-		ft_isascii \
-		ft_isprint \
-		ft_memchr \
-		ft_memcmp \
-		ft_memcpy \
-		ft_memmove \
-		ft_memset \
-		ft_strlen \
-		ft_strlcpy \
-		ft_strncmp \
-		ft_strrchr \
-		ft_tolower \
-		ft_toupper \
-		ft_strnstr \
-		ft_calloc \
-		ft_strdup \
-		ft_strjoin \
-		ft_putchar_fd \
-		ft_putnbr_fd \
-		ft_putstr_fd \
-		ft_putendl_fd \
-		ft_strtrim \
-		ft_strmapi \
-		ft_substr \
+			ft_atoi \
+			ft_bzero \
+			ft_isalnum \
+			ft_isalpha \
+			ft_isdigit \
+			ft_isascii \
+			ft_isprint \
+			ft_memchr \
+			ft_memcmp \
+			ft_memcpy \
+			ft_memmove \
+			ft_memset \
+			ft_strlen \
+			ft_strlcpy \
+			ft_strlcat \
+			ft_strncmp \
+			ft_strrchr \
+			ft_tolower \
+			ft_toupper \
+			ft_strnstr \
+			ft_calloc \
+			ft_strdup \
+			ft_strjoin \
+			ft_putnbr_fd \
+			ft_putchar_fd \
+			ft_putstr_fd \
+			ft_putendl_fd \
+			ft_strtrim \
+			ft_strmapi \
+			ft_substr \
 
-FILES_B = 	ft_ \
+FILES_B = ft_lstsize \
+			ft_lstnew \
+			ft_lstadd_front \
+			ft_lstlast \
+			ft_lstadd_back \
+			ft_lstiter \
 
 SRCS_DIR = ./
 SRCS = $(addprefix $(SRCS_DIR), $(addsuffix .c, $(FILES)))
