@@ -46,6 +46,7 @@ FILES = ft_strrchr \
 			ft_strtrim \
 			ft_strmapi \
 			ft_substr \
+			ft_strchr \
 
 FILES_B = ft_lstsize \
 			ft_lstnew \
@@ -53,6 +54,8 @@ FILES_B = ft_lstsize \
 			ft_lstlast \
 			ft_lstadd_back \
 			ft_lstiter \
+			ft_lstclear \
+			ft_lstdelone \
 
 SRCS_DIR = ./
 SRCS = $(addprefix $(SRCS_DIR), $(addsuffix .c, $(FILES)))

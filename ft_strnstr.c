@@ -6,45 +6,44 @@
 /*   By: ahalleux <ahalleux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/04 12:39:20 by ahalleux          #+#    #+#             */
-/*   Updated: 2022/04/05 12:11:29 by ahalleux         ###   ########.fr       */
+/*   Updated: 2022/04/19 12:09:48 by ahalleux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strchr(const char *s, int c)
+char    *ft_strnstr(const char *s1, const char *s2, size_t len)
 {
-	char	*str;
+    size_t    i;
+    size_t    j;
+	char *s1_less;
 
-	str = (char *)s;
-	while (*str != c)
-	{
-		if (*str == '\0')
-		{
-			return (NULL);
-		}
-		str++;
-	}
-	return (str);
+	s1_less = (char *)s1;
+    i = 0;
+    if (!*s2)
+        return (s1_less);
+    while (s1_less[i] && i < len)
+    {
+        j = 0;
+        while (s1_less[i + j] == s2[j] && i + j < len)
+        {
+            if (!s2[j])
+                return (s1_less + i);
+            j++;
+        }
+        if (!s2[j])
+            return (s1_less + i);
+        i++;
+    }
+    return (NULL);
 }
 
-char	*ft_strnstr(const char *s1, const char *s2, size_t n)
+int main(void)
 {
-	char	*tmp;
-	char	*mem;
-	size_t	size;
+	char *s1 = "see FF your FF return FF now FF";
+	char *s2 = "FF";
+	size_t max = strlen(s1);
 
-	tmp = (char *)s1;
-	mem = (char *)(s1 + n);
-	size = ft_strlen((char *)s2);
-	if (!size)
-		return (tmp);
-	tmp = ft_strchr(tmp, *s2);
-	while (tmp <= mem)
-	{
-		if ((tmp + size <= mem) && !ft_strncmp(tmp, (char *)s2, size))
-			return (tmp);
-		tmp++;
-	}
-	return (NULL);
+	printf("Reponse attenue: %s \n", strnstr(s1, s2, max));
+	printf("Ma reponse: %s \n", ft_strnstr(s1, s2, max));
 }

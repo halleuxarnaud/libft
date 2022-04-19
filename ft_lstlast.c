@@ -6,7 +6,7 @@
 /*   By: ahalleux <ahalleux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/06 13:33:47 by ahalleux          #+#    #+#             */
-/*   Updated: 2022/04/11 11:03:46 by ahalleux         ###   ########.fr       */
+/*   Updated: 2022/04/13 11:30:45 by ahalleux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,9 @@
 
 t_list	*ft_lstlast(t_list *lst)
 {
-	while (lst)
+	if (!lst)
+		return (NULL);
+	while (lst->next)
 		lst = lst->next;
 	return (lst);
 }

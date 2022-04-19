@@ -6,7 +6,7 @@
 /*   By: ahalleux <ahalleux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/05 11:35:54 by ahalleux          #+#    #+#             */
-/*   Updated: 2022/04/11 16:20:15 by ahalleux         ###   ########.fr       */
+/*   Updated: 2022/04/19 12:39:10 by ahalleux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,5 +63,6 @@ void			ft_lstdelone(t_list *lst, void (*del)(void*));
 void			ft_lstclear(t_list **lst, void (*del)(void*));
 void			ft_lstiter(t_list *lst, void (*f)(void *));
 size_t			ft_strlcat(char *dest, const char *src, size_t destsize);
+char			*ft_strchr(const char *s, int c);
 
 #endif

@@ -1,40 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ahalleux <ahalleux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/05 12:48:00 by ahalleux          #+#    #+#             */
-/*   Updated: 2022/04/13 12:49:39 by ahalleux         ###   ########.fr       */
+/*   Created: 2022/04/19 12:18:22 by ahalleux          #+#    #+#             */
+/*   Updated: 2022/04/19 12:39:58 by ahalleux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcat(char *dst, const char *src, size_t size)
+char	*ft_strchr(const char *s, int c)
 {
-	char	*s;
-	size_t	len_dst;
-	size_t	res;
-	size_t	len_src;
-	size_t	i;
+	int		i;
+    char *str;
 
-	s = (char *)src;
-	len_dst = ft_strlen(dst);
-	len_src = ft_strlen(s);
-	res = 0;
+	str = (char *)s;
 	i = 0;
-	if (size > len_dst)
-		res = len_src + len_dst;
-	else
-		res = len_src + size;
-	while (s[i] && (len_dst + 1) < size)
+	while (str[i])
 	{
-		dst[len_dst] = s[i];
-		len_dst++;
+		if (str[i] == c)
+			return (&str[i]);
 		i++;
 	}
-	dst[len_dst] = '\0';
-	return (res);
+	if (c == '\0')
+		return (&str[i]);
+    return (0);
 }
+
+/*
+int main()
+{
+	char	*str = "je suis une chaine sans s a partir d'ici";
+
+	printf("%-20s %-10s %-10s\n%-20s %-10s %-10s\n",
+        "resultat attendu:", strchr(str, 's'), strchr(str, 'z'),
+        "Mon resultat", ft_strchr(str, 's'), ft_strchr(str, 'z'));
+}
+*/
