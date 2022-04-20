@@ -47,6 +47,9 @@ FILES = ft_strrchr \
 			ft_strmapi \
 			ft_substr \
 			ft_strchr \
+			ft_itoa \
+			ft_split \
+			ft_striteri \
 
 FILES_B = ft_lstsize \
 			ft_lstnew \

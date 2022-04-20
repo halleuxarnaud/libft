@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ahalleux <ahalleux@student.42.fr>          +#+  +:+       +#+        */
+/*   By: arnaudhallerux <arnaudhallerux@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/04 12:39:20 by ahalleux          #+#    #+#             */
-/*   Updated: 2022/04/19 12:09:48 by ahalleux         ###   ########.fr       */
+/*   Updated: 2022/04/19 20:11:55 by arnaudhalle      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,7 @@ char    *ft_strnstr(const char *s1, const char *s2, size_t len)
     return (NULL);
 }
 
+/*
 int main(void)
 {
 	char *s1 = "see FF your FF return FF now FF";
@@ -47,3 +48,5 @@ int main(void)
 	printf("Reponse attenue: %s \n", strnstr(s1, s2, max));
 	printf("Ma reponse: %s \n", ft_strnstr(s1, s2, max));
 }
+
+*/

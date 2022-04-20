@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ahalleux <ahalleux@student.42.fr>          +#+  +:+       +#+        */
+/*   By: arnaudhallerux <arnaudhallerux@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/05 11:35:54 by ahalleux          #+#    #+#             */
-/*   Updated: 2022/04/19 12:39:10 by ahalleux         ###   ########.fr       */
+/*   Updated: 2022/04/19 20:18:36 by arnaudhalle      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,5 +64,8 @@ void			ft_lstclear(t_list **lst, void (*del)(void*));
 void			ft_lstiter(t_list *lst, void (*f)(void *));
 size_t			ft_strlcat(char *dest, const char *src, size_t destsize);
 char			*ft_strchr(const char *s, int c);
+char			*ft_itoa(int n);
+char			**ft_split(char const *s, char c);
+void			ft_striteri(char *s, void (*f)(unsigned int, char *));
 
 #endif
