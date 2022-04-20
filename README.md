@@ -11,7 +11,7 @@ Cependant, toutes les fonctions doivent être protégées contre la saisie de do
 | ft_memset  | ft_substr  | ft_lstnew  |
 | ft_bzero  | ft_strjoin  | ft_lstadd_front  |
 | ft_memcpy  | ft_strtrim  | ft_lstsize  |
-| ft_memccpy  | ft_split  | ft_lstlast  |
+| ft_strdup  | ft_split  | ft_lstlast  |
 | ft_memmove  | ft_itoa  | ft_lstadd_back  |
 | ft_memchr  | ft_strmapi  | ft_lstdelone  |
 | ft_memcmp  | ft_putchar_fd  | ft_lstclear |
@@ -31,7 +31,6 @@ Cependant, toutes les fonctions doivent être protégées contre la saisie de do
 | ft_toupper  |   |   |
 | ft_tolower  |  |   |
 | ft_calloc  |   |   |
-| ft_strdup  |  |   |
 ## Résultat du test "Libftest"
 SOON
 Link to the tests: [Click](https://github.com/jtoty/Libftest)
