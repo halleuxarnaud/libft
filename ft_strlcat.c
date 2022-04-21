@@ -6,7 +6,7 @@
 /*   By: ahalleux <ahalleux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/05 12:48:00 by ahalleux          #+#    #+#             */
-/*   Updated: 2022/04/13 12:49:39 by ahalleux         ###   ########.fr       */
+/*   Updated: 2022/04/20 18:22:24 by ahalleux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 		len_dst++;
 		i++;
 	}
-	dst[len_dst] = '\0';
+	if (size >= len_dst)
+		dst[len_dst] = '\0';
 	return (res);
 }

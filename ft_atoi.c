@@ -6,23 +6,31 @@
 /*   By: ahalleux <ahalleux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/04 12:37:17 by ahalleux          #+#    #+#             */
-/*   Updated: 2022/04/11 16:01:39 by ahalleux         ###   ########.fr       */
+/*   Updated: 2022/04/20 18:10:23 by ahalleux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+int	ft_verif(char c)
+{
+	if (c && (c == '\f' || c == '\t' || c == ' '
+			|| c == '\n' || c == '\r' || c == '\v'))
+		return (1);
+	else
+		return (0);
+}
+
 int	ft_atoi(const char *str)
 {
-	int		sign;
+	int						sign;
 	unsigned long long		result;
-	int		i;
+	int						i;
 
 	result = 0;
 	sign = 1;
 	i = 0;
-	while (str[i] && (str[i] == '\f' || str[i] == '\t' || str[i] == ' '
-			|| str[i] == '\n' || str[i] == '\r' || str[i] == '\v'))
+	while (ft_verif(str[i]) == 1)
 		i++;
 	if (str[i] == '-' || str[i] == '+')
 	{

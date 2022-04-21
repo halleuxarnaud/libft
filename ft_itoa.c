@@ -3,18 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: arnaudhallerux <arnaudhallerux@student.    +#+  +:+       +#+        */
+/*   By: ahalleux <ahalleux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/19 19:44:27 by arnaudhalle       #+#    #+#             */
-/*   Updated: 2022/04/19 19:50:38 by arnaudhalle      ###   ########.fr       */
+/*   Updated: 2022/04/20 19:03:14 by ahalleux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static	int		size_str(int n)
+static	int	size_str(int n)
 {
-	int len;
+	int	len;
 
 	len = 0;
 	if (n == 0)
