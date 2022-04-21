@@ -6,7 +6,7 @@
 /*   By: ahalleux <ahalleux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/19 19:44:27 by arnaudhalle       #+#    #+#             */
-/*   Updated: 2022/04/20 19:03:14 by ahalleux         ###   ########.fr       */
+/*   Updated: 2022/04/21 13:49:04 by ahalleux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,8 @@ char	*ft_itoa(int n)
 		len++;
 		tmp = -tmp;
 	}
-	if (!(str = malloc(sizeof(*str) * (len + 1))))
+	str = malloc(sizeof(*str) * (len + 1));
+	if (!str)
 		return (NULL);
 	str[len] = '\0';
 	while (len)
