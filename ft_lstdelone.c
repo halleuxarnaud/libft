@@ -6,7 +6,7 @@
 /*   By: ahalleux <ahalleux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/07 11:54:27 by ahalleux          #+#    #+#             */
-/*   Updated: 2022/04/11 12:56:00 by ahalleux         ###   ########.fr       */
+/*   Updated: 2022/04/21 14:24:52 by ahalleux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ void	ft_lstdelone(t_list *lst, void (*del)(void*))
 		return ;
 	}
 	i = 0;
-	while (i < (void *)del)
+	while (i < (int)del)
 	{
 		i++;
 		pprec = cur;

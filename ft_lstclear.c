@@ -6,7 +6,7 @@
 /*   By: ahalleux <ahalleux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/07 12:13:49 by ahalleux          #+#    #+#             */
-/*   Updated: 2022/04/11 13:05:52 by ahalleux         ###   ########.fr       */
+/*   Updated: 2022/04/21 14:24:29 by ahalleux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,12 +23,12 @@ void	ft_lstclear(t_list **lst, void (*del)(void*))
 		return ;
 	while (*lst)
 	{
-		if (i < del)
+		if (i < (int)del)
 		{
 			tmp = (*lst)->next;
 			i++;
 		}
-		else if (i >= del)
+		else if (i >= (int)del)
 		{
 			ft_lstdelone(*lst, del);
 			i++;

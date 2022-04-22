@@ -6,12 +6,18 @@
 /*   By: ahalleux <ahalleux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/04 13:53:26 by ahalleux          #+#    #+#             */
-/*   Updated: 2022/04/20 19:01:44 by ahalleux         ###   ########.fr       */
+/*   Updated: 2022/04/21 13:58:41 by ahalleux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
+/*
+void	checkmalloc(char *str)
+{
+	if (!str)
+		return (NULL);
+}
+*/
 static	int	check_c(char to_check, char c)
 {
 	if (to_check == c)

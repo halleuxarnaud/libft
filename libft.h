@@ -6,7 +6,7 @@
 /*   By: ahalleux <ahalleux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/05 11:35:54 by ahalleux          #+#    #+#             */
-/*   Updated: 2022/04/20 18:43:18 by ahalleux         ###   ########.fr       */
+/*   Updated: 2022/04/21 15:06:46 by ahalleux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,6 +62,7 @@ void			ft_lstadd_back(t_list **lst, t_list *new);
 void			ft_lstdelone(t_list *lst, void (*del)(void*));
 void			ft_lstclear(t_list **lst, void (*del)(void*));
 void			ft_lstiter(t_list *lst, void (*f)(void *));
+t_list			*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 size_t			ft_strlcat(char *dest, const char *src, size_t destsize);
 char			*ft_strchr(const char *s, int c);
 char			*ft_itoa(int n);
