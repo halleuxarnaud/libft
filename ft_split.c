@@ -6,20 +6,16 @@
 /*   By: ahalleux <ahalleux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/04 13:53:26 by ahalleux          #+#    #+#             */
-/*   Updated: 2022/04/21 13:58:41 by ahalleux         ###   ########.fr       */
+/*   Updated: 2022/04/23 01:55:45 by ahalleux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-/*
-void	checkmalloc(char *str)
-{
-	if (!str)
-		return (NULL);
-}
-*/
+
 static	int	check_c(char to_check, char c)
 {
+	if (!to_check || !c)
+		return (0);
 	if (to_check == c)
 		return (1);
 	return (0);
@@ -51,8 +47,6 @@ static	int	*size_blocks(char const *s, char c)
 	i = 0;
 	j = 0;
 	tab = malloc(sizeof(*tab) * (nb_blocks(s, c)));
-	if (!tab)
-		return (NULL);
 	while (i < nb_blocks(s, c))
 		tab[i++] = 0;
 	i = 0;

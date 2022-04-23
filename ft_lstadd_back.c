@@ -6,7 +6,7 @@
 /*   By: ahalleux <ahalleux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/06 13:44:20 by ahalleux          #+#    #+#             */
-/*   Updated: 2022/04/13 11:39:09 by ahalleux         ###   ########.fr       */
+/*   Updated: 2022/04/23 01:25:29 by ahalleux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,4 +27,3 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 		}
 	}
 }
-
