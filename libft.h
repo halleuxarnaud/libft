@@ -6,14 +6,13 @@
 /*   By: ahalleux <ahalleux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/05 11:35:54 by ahalleux          #+#    #+#             */
-/*   Updated: 2022/04/25 14:23:50 by ahalleux         ###   ########.fr       */
+/*   Updated: 2022/04/25 17:50:53 by ahalleux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
-# include <stdio.h>
 # include <unistd.h>
 # include <stdlib.h>
 # include <string.h>
