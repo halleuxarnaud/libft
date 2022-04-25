@@ -6,88 +6,67 @@
 /*   By: ahalleux <ahalleux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/04 13:53:26 by ahalleux          #+#    #+#             */
-/*   Updated: 2022/04/23 01:55:45 by ahalleux         ###   ########.fr       */
+/*   Updated: 2022/04/25 12:25:34 by ahalleux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static	int	check_c(char to_check, char c)
+static size_t	count_words(char const *s, char c)
 {
-	if (!to_check || !c)
-		return (0);
-	if (to_check == c)
-		return (1);
-	return (0);
+	size_t	word_count;
+	int		skip;
+
+	word_count = 0;
+	skip = 1;
+	while (*s)
+	{
+		if (*s != c && skip)
+		{
+			skip = 0;
+			word_count++;
+		}
+		else if (*s == c)
+			skip = 1;
+		s++;
+	}
+	return (word_count);
 }
 
-static	int	nb_blocks(char const *s, char c)
+static void	make_words(char **words, char const *s, char c, size_t n_words)
 {
-	int		nb;
-	int		i;
+	char	*ptr_c;
 
-	nb = 0;
-	i = 0;
-	while (s[i])
+	while (*s && *s == c)
+		s++;
+	while (n_words--)
 	{
-		if ((i == 0 && !check_c(s[0], c))
-			|| (i > 0 && check_c(s[i - 1], c) && !check_c(s[i], c)))
-			nb++;
-		i++;
+		ptr_c = ft_strchr(s, c);
+		if (ptr_c != NULL)
+		{
+			*words = ft_substr(s, 0, ptr_c - s);
+			while (*ptr_c && *ptr_c == c)
+				ptr_c++;
+			s = ptr_c;
+		}
+		else
+			*words = ft_substr(s, 0, ft_strlen((char *)s) + 1);
+		words++;
 	}
-	return (nb);
-}
-
-static	int	*size_blocks(char const *s, char c)
-{
-	int		*tab;
-	int		i;
-	int		j;
-
-	i = 0;
-	j = 0;
-	tab = malloc(sizeof(*tab) * (nb_blocks(s, c)));
-	while (i < nb_blocks(s, c))
-		tab[i++] = 0;
-	i = 0;
-	while (s[i])
-	{
-		if (!check_c(s[i], c))
-			tab[j]++;
-		else if (i > 0 && !check_c(s[i - 1], c))
-			j++;
-		i++;
-	}
-	return (tab);
+	*words = NULL;
 }
 
 char	**ft_split(char const *s, char c)
 {
-	int		i;
-	int		j;
-	int		k;
-	int		*tab;
-	char	**dest;
+	size_t	num_words;
+	char	**words;
 
-	i = 0;
-	j = 0;
-	dest = malloc(sizeof(dest) * (nb_blocks(s, c) + 1));
-	tab = size_blocks(s, c);
-	if (!s || !dest || !tab)
+	if (s == NULL)
 		return (NULL);
-	while (j < nb_blocks(s, c))
-	{
-		k = 0;
-		while (check_c(s[i], c))
-			i++;
-		dest[j] = malloc(sizeof(*dest) * (tab[j] + 1));
-		if (!dest)
-			return (NULL);
-		while (k < tab[j])
-			dest[j][k++] = s[i++];
-		dest[j++][k] = '\0';
-	}
-	dest[j] = NULL;
-	free(tab);
-	return (dest);
+	num_words = count_words(s, c);
+	words = malloc(sizeof(char **) * (num_words + 1));
+	if (words == NULL)
+		return (NULL);
+	make_words(words, s, c, num_words);
+	return (words);
 }

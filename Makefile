@@ -1,10 +1,3 @@
-
-LIGHTPURPLE    = $(shell tput -Txterm setaf 4)
-RED            = $(shell tput -Txterm setaf 1)
-RESET        = $(shell tput -Txterm sgr0)
-GREEN        = $(shell tput -Txterm setaf 2)
-YELLOW        = $(shell tput -Txterm setaf 3)
-
 NAME = libft.a
 NAMEPROG = a.out
 
@@ -71,31 +64,21 @@ OBJS_B = $(addprefix $(OBJS_DIR), $(addsuffix .o, $(FILES_B)))
 
 
 .c.o: $(SRCS)
-	@$(CC) $(CFLAGS) -c -I./ -o $@ $<
+	$(CC) $(CFLAGS) -c -I./ -o $@ $<
 
 $(NAME): $(OBJS)
-	@echo "${LIGHTPURPLE}Compilation ... :)${RESET}"
-	@echo "${GREEN}SUCCES${RESET}"
-	@echo "${YELLOW}============================================================================================================${RESET}"
 	$(AR) $@ $^
-	@echo "${YELLOW}============================================================================================================${RESET}"
 
 bonus: $(OBJS_B)
-	@$(AR) $(NAME) $^
-	@echo "${LIGHTPURPLE}Bonus ${GREEN}	ADD${RESET}"
+	$(AR) $(NAME) $^
 
 all: $(NAME)
 
 clean:
-	@$(RM) $(OBJS) $(OBJS_B)
-	@echo "${RED}File .o deleted${RESET}"
+	$(RM) $(OBJS) $(OBJS_B)
 
 fclean: clean
-	@$(RM) $(NAME)
-	@echo "${RED}libft.a deleted${RESET}"
-aclean:
-	@$(RM) $(NAMEPROG)
-	@echo "${RED}a.out deleted${RESET}"
+	$(RM) $(NAME)
 
 
 re: clean all

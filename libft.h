@@ -6,7 +6,7 @@
 /*   By: ahalleux <ahalleux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/05 11:35:54 by ahalleux          #+#    #+#             */
-/*   Updated: 2022/04/21 15:06:46 by ahalleux         ###   ########.fr       */
+/*   Updated: 2022/04/25 13:24:58 by ahalleux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 # include <string.h>
 # include <limits.h>
 
-typedef struct	s_list
+typedef	struct	s_list
 {
 	void			*content;
 	struct s_list	*next;
