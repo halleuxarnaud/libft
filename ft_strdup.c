@@ -6,13 +6,13 @@
 /*   By: ahalleux <ahalleux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/04 12:38:50 by ahalleux          #+#    #+#             */
-/*   Updated: 2022/04/11 16:11:22 by ahalleux         ###   ########.fr       */
+/*   Updated: 2022/04/25 14:21:54 by ahalleux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strdup(char *src)
+char	*ft_strdup(const char *src)
 {
 	int		i;
 	int		len;

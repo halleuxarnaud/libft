@@ -6,13 +6,13 @@
 /*   By: ahalleux <ahalleux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/04 12:39:07 by ahalleux          #+#    #+#             */
-/*   Updated: 2022/04/20 18:43:07 by ahalleux         ###   ########.fr       */
+/*   Updated: 2022/04/25 14:22:31 by ahalleux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlen(char *str)
+size_t	ft_strlen(const char *str)
 {
 	int		i;
 
