@@ -6,7 +6,7 @@
 /*   By: ahalleux <ahalleux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/04 12:38:24 by ahalleux          #+#    #+#             */
-/*   Updated: 2022/04/05 11:08:39 by ahalleux         ###   ########.fr       */
+/*   Updated: 2022/04/25 16:29:54 by ahalleux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,5 +28,5 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 		dest_temp[i] = src_temp[i];
 		i++;
 	}
-	return (dest);
+	return (dest_temp);
 }

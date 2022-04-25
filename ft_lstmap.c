@@ -6,7 +6,7 @@
 /*   By: ahalleux <ahalleux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/11 10:51:00 by ahalleux          #+#    #+#             */
-/*   Updated: 2022/04/25 13:17:39 by ahalleux         ###   ########.fr       */
+/*   Updated: 2022/04/25 16:02:26 by ahalleux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	t_list	*new_elem;
 
 	new_lst = NULL;
-	while (lst)
+	while (lst && f)
 	{
 		new_elem = ft_lstnew((f)(lst->content));
 		if (!new_elem)

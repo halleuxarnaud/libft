@@ -6,7 +6,7 @@
 /*   By: ahalleux <ahalleux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/04 12:38:43 by ahalleux          #+#    #+#             */
-/*   Updated: 2022/04/05 11:17:47 by ahalleux         ###   ########.fr       */
+/*   Updated: 2022/04/25 16:52:12 by ahalleux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_putnbr_fd(int n, int fd)
 {
-	if (n == -2147483648)
+	if (n == INT_MIN)
 		ft_putstr_fd("-2147483648", fd);
 	else
 	{

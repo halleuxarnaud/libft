@@ -6,13 +6,13 @@
 /*   By: ahalleux <ahalleux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/04 12:39:30 by ahalleux          #+#    #+#             */
-/*   Updated: 2022/04/13 11:19:36 by ahalleux         ###   ########.fr       */
+/*   Updated: 2022/04/25 17:09:38 by ahalleux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_setcheck(char c, char const *set)
+static	int	ft_setcheck(char c, char const *set)
 {
 	size_t	i;
 

@@ -6,13 +6,13 @@
 /*   By: ahalleux <ahalleux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/04 12:37:17 by ahalleux          #+#    #+#             */
-/*   Updated: 2022/04/20 18:10:23 by ahalleux         ###   ########.fr       */
+/*   Updated: 2022/04/25 16:53:06 by ahalleux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_verif(char c)
+static	int	ft_verif(char c)
 {
 	if (c && (c == '\f' || c == '\t' || c == ' '
 			|| c == '\n' || c == '\r' || c == '\v'))
