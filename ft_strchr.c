@@ -6,7 +6,7 @@
 /*   By: ahalleux <ahalleux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/19 12:18:22 by ahalleux          #+#    #+#             */
-/*   Updated: 2022/04/20 18:00:14 by ahalleux         ###   ########.fr       */
+/*   Updated: 2022/04/26 15:11:39 by ahalleux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@ char	*ft_strchr(const char *s, int c)
 	int		i;
 	char	*str;
 
+	c %= 256;
 	str = (char *)s;
 	i = 0;
 	while (str[i])
@@ -29,14 +30,3 @@ char	*ft_strchr(const char *s, int c)
 		return (&str[i]);
 	return (0);
 }
-
-/*
-int main()
-{
-	char	*str = "je suis une chaine sans s a partir d'ici";
-
-	printf("%-20s %-10s %-10s\n%-20s %-10s %-10s\n",
-        "resultat attendu:", strchr(str, 's'), strchr(str, 'z'),
-        "Mon resultat", ft_strchr(str, 's'), ft_strchr(str, 'z'));
-}
-*/

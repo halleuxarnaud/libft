@@ -6,7 +6,7 @@
 /*   By: ahalleux <ahalleux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/04 12:37:57 by ahalleux          #+#    #+#             */
-/*   Updated: 2022/04/05 10:43:55 by ahalleux         ###   ########.fr       */
+/*   Updated: 2022/04/26 19:44:43 by ahalleux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,3 @@ int	ft_isalpha(int c)
 		return (1);
 	return (0);
 }
-
-/*
-int main()
-{
-	printf("%d", ft_isalpha('d'));
-}
-*/

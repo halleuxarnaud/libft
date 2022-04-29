@@ -37,16 +37,3 @@ char	*ft_strnstr(const char *s1, const char *s2, size_t len)
 	}
 	return (NULL);
 }
-
-/*
-int main(void)
-{
-	char *s1 = "see FF your FF return FF now FF";
-	char *s2 = "FF";
-	size_t max = strlen(s1);
-
-	printf("Reponse attenue: %s \n", strnstr(s1, s2, max));
-	printf("Ma reponse: %s \n", ft_strnstr(s1, s2, max));
-}
-
-*/

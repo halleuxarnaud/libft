@@ -50,13 +50,3 @@ char	*ft_strtrim(char const *s1, char const *set)
 	str[i] = '\0';
 	return (str);
 }
-
-/*
-int main(void)
-{
-	char *str = "Salut je m'apelle arnaud";
-	char *set = "";
-	printf("%s", ft_strtrim(str, set));
-}
-
-*/

@@ -30,12 +30,3 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	}
 	return (NULL);
 }
-/*
-int main (void)
-{
-    char    str[] = "ceci est une phrase.";
-    char    c = 't';
-    char *mem = ft_memchr(str, c, 15);
-    printf("%s\n", mem);
-}
-*/

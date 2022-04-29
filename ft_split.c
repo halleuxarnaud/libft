@@ -6,7 +6,7 @@
 /*   By: ahalleux <ahalleux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/04 13:53:26 by ahalleux          #+#    #+#             */
-/*   Updated: 2022/04/25 12:25:34 by ahalleux         ###   ########.fr       */
+/*   Updated: 2022/04/25 22:30:52 by ahalleux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,19 @@ static size_t	count_words(char const *s, char c)
 	return (word_count);
 }
 
+static	void	err_free_malloc(char **tab)
+{
+	int		i;
+
+	i = 0;
+	while (tab[i])
+	{
+		free(tab[i]);
+		i++;
+	}
+	free(tab);
+}
+
 static void	make_words(char **words, char const *s, char c, size_t n_words)
 {
 	char	*ptr_c;
@@ -45,6 +58,11 @@ static void	make_words(char **words, char const *s, char c, size_t n_words)
 		if (ptr_c != NULL)
 		{
 			*words = ft_substr(s, 0, ptr_c - s);
+			if (!(*words))
+			{
+				err_free_malloc(words);
+				return ;
+			}
 			while (*ptr_c && *ptr_c == c)
 				ptr_c++;
 			s = ptr_c;
